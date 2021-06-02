@@ -43,21 +43,21 @@ AM_CPPFLAGS = \
 # -msse4.1 -mavx
 
 pkgconfdir = $(libdir)/pkgconfig
-pkgconf_DATA = libnvme.pc
+pkgconf_DATA = libspdknvme.pc
 pkginclude_HEADERS =
 
 bin_PROGRAMS =
 noinst_PROGRAMS =
 
 noinst_HEADERS =
-noinst_LTLIBRARIES = libnvme_common.la
+noinst_LTLIBRARIES = libspdknvme_common.la
 
 include include/Makemodule.am
 include lib/common/Makemodule.am
 
-lib_LTLIBRARIES = libnvme.la
-libnvme_la_DEPENDENCIES = exports libnvme_common.la
-libnvme_ldadd = $(LDADD) libnvme.la
+lib_LTLIBRARIES = libspdknvme.la
+libspdknvme_la_DEPENDENCIES = exports libspdknvme_common.la
+libspdknvme_ldadd = $(LDADD) libspdknvme.la
 
 include lib/nvme/Makemodule.am
 include tools/perf/Makemodule.am

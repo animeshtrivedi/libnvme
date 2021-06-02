@@ -1,0 +1,11 @@
+prefix=/home/atr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name:           libspdknvme
+Description:    A library implementing a user level NVMe driver SPDK
+Version:        0.0.1
+Cflags:         -I${includedir}
+Libs:           -L${libdir} -lspdknvme
+

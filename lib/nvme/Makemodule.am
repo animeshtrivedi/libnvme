@@ -23,9 +23,9 @@ NVME_HFILES = \
 
 AM_CPPFLAGS += -Ilib/nvme -Ilib/common
 
-libnvme_la_SOURCES = $(NVME_CFILES) $(NVME_HFILES)
-libnvme_la_CFLAGS = $(AM_CPPFLAGS)
-libnvme_la_LIBADD = libnvme_common.la
-libnvme_la_LDFLAGS = -lnuma -Wl,--version-script,$(top_srcdir)/exports \
+libspdknvme_la_SOURCES = $(NVME_CFILES) $(NVME_HFILES)
+libspdknvme_la_CFLAGS = $(AM_CPPFLAGS)
+libspdknvme_la_LIBADD = libspdknvme_common.la
+libspdknvme_la_LDFLAGS = -lnuma -Wl,--version-script,$(top_srcdir)/exports \
 		     -release '$(PACKAGE_VERSION)'
 

@@ -3,9 +3,9 @@ exec_prefix=@exec_prefix@
 libdir=@libdir@
 includedir=@includedir@
 
-Name:           libnvme
-Description:    A library implementing a user level NVMe driver
+Name:           libspdknvme
+Description:    A library implementing a user level NVMe driver SPDK
 Version:        @PACKAGE_VERSION@
 Cflags:         -I${includedir}
-Libs:           -L${libdir} -lnvme
+Libs:           -L${libdir} -lspdknvme
 

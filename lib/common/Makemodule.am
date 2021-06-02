@@ -21,6 +21,6 @@ UTILS_HFILES = \
 
 AM_CPPFLAGS += -Ilib/common
 
-libnvme_common_la_SOURCES = $(UTILS_HFILES) $(UTILS_CFILES)
-libnvme_common_la_CFLAGS = $(AM_CPPFLAGS)
+libspdknvme_common_la_SOURCES = $(UTILS_HFILES) $(UTILS_CFILES)
+libspdknvme_common_la_CFLAGS = $(AM_CPPFLAGS)
 

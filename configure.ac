@@ -1,7 +1,7 @@
 # Process this file with autoconf to produce a configure script.
 
 #AC_PREREQ([2.69])
-AC_INIT([libnvme], [0.0.1], [christophe.louargant@wdc.com, damien.lemoal@wdc.com])
+AC_INIT([libspdknvme], [0.0.1], [christophe.louargant@wdc.com, damien.lemoal@wdc.com])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_HEADER([include/config.h])
@@ -57,7 +57,7 @@ AM_CONDITIONAL(__AVX__, test "$have_avx" = "yes")
 # Checks for library functions.
 # AC_CHECK_FUNCS([memset])
 AC_CONFIG_FILES([
-        libnvme.pc
+        libspdknvme.pc
         Makefile
 ])
 
