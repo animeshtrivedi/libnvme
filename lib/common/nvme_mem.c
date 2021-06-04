@@ -58,7 +58,7 @@ static int nvme_mem_get_hp_dir(void)
 	nvme_debug("hugetlbfs mounted at %s\n", mntdir);
 
 	/* Create a unique subdirectory in the mount point for this process */
-	asprintf(&mm.hp_dir, "%s/libnvme.%d.XXXXXX", mntdir, getpid());
+	asprintf(&mm.hp_dir, "%s/libspdknvme.%d.XXXXXX", mntdir, getpid());
 	if (!mm.hp_dir)
 		return -ENOMEM;
 	if (!mkdtemp(mm.hp_dir)) {
@@ -126,7 +126,7 @@ static struct nvme_hugepage *nvme_mem_alloc_hp(unsigned int node_id)
 	hp->node_id = node_id;
 
 	/* Create the hugepage file */
-	sprintf(hp->fname, "libnvme.%d-%zu",
+	sprintf(hp->fname, "libspdknvme.%d-%zu",
 		getpid(),
 		nvme_atomic64_add_return(&mm.hp_tmp, 1));
 

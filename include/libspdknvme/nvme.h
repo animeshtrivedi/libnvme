@@ -51,7 +51,7 @@
 extern "C" {
 #endif
 
-#include <libnvme/nvme_spec.h>
+#include <libspdknvme/nvme_spec.h>
 
 #include <pciaccess.h>
 #include <stdbool.h>

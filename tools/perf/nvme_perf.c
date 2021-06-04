@@ -323,7 +323,7 @@ nvme_perf_init(void)
         }
         sched_yield();
 
-	/* Initialize libnvme */
+	/* Initialize libspdknvme */
 	ret = nvme_lib_init(nt.log_level, -1, NULL);
 	if (ret != 0) {
 		fprintf(stderr,

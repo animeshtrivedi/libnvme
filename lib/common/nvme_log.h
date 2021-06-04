@@ -89,49 +89,49 @@ extern void nvme_vlog(enum nvme_log_level level,
 /* System is unusable */
 #define nvme_emerg(format, args...)		\
 	nvme_log(NVME_LOG_EMERG,		\
-		 "libnvme (FATAL): " format,	\
+		 "libspdknvme (FATAL): " format,	\
 		 ## args)
 
 /* Action must be taken immediately */
 #define nvme_alert(format, args...)		\
 	nvme_log(NVME_LOG_ALERT,		\
-		 "libnvme (ALERT): " format,	\
+		 "libspdknvme (ALERT): " format,	\
 		 ## args)
 
 /* Critical conditions */
 #define nvme_crit(format, args...)		\
 	nvme_log(NVME_LOG_CRIT,			\
-		 "libnvme (CRITICAL): " format,	\
+		 "libspdknvme (CRITICAL): " format,	\
 		 ## args)
 
 /* Error conditions */
 #define nvme_err(format, args...)		\
 	nvme_log(NVME_LOG_ERR,			\
-		 "libnvme (ERROR): " format,	\
+		 "libspdknvme (ERROR): " format,	\
 		 ## args)
 
 /* Warning conditions */
 #define nvme_warning(format, args...)		\
 	nvme_log(NVME_LOG_WARNING,		\
-		 "libnvme (WARNING): " format,	\
+		 "libspdknvme (WARNING): " format,	\
 		 ## args)
 
 /* Normal but significant condition */
 #define nvme_notice(format, args...)	\
 	nvme_log(NVME_LOG_NOTICE,	\
-		 "libnvme: " format,	\
+		 "libspdknvme: " format,	\
 		 ## args)
 
 /* Informational */
 #define nvme_info(format, args...)	\
 	nvme_log(NVME_LOG_INFO,		\
-		 "libnvme: " format,	\
+		 "libspdknvme: " format,	\
 		 ## args)
 
 /* Debug-level messages */
 #define nvme_debug(format, args...)	\
 	nvme_log(NVME_LOG_DEBUG,	\
-		 "libnvme: " format,	\
+		 "libspdknvme: " format,	\
 		 ## args)
 
 #endif /* __NVME_LOG_H__ */

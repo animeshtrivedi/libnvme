@@ -9,8 +9,8 @@ NVME_CFILES = \
 	lib/nvme/nvme_quirks.c
 
 NVME_HFILES = \
-	include/libnvme/nvme.h \
-        include/libnvme/nvme_spec.h \
+	include/libspdknvme/nvme.h \
+        include/libspdknvme/nvme_spec.h \
 	lib/common/nvme_arch.h \
 	lib/common/nvme_atomic.h \
 	lib/common/nvme_rwlock.h \

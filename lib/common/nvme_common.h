@@ -55,7 +55,7 @@
 #include <sys/queue.h>
 #include <linux/types.h>
 
-#include "libnvme/nvme.h"
+#include "libspdknvme/nvme.h"
 #include "nvme_arch.h"
 #include "nvme_log.h"
 

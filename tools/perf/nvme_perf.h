@@ -5,7 +5,7 @@
  * Please see COPYING file for license text.
  */
 
-#include "libnvme/nvme.h"
+#include "libspdknvme/nvme.h"
 
 /*
  * I/O types.

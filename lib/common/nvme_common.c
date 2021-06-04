@@ -226,7 +226,7 @@ void __nvme_panic(const char *funcname, const char *format, ...)
 
 /**
  * Library initialization: must be run first by any application
- * before calling any libnvme API.
+ * before calling any libspdknvme API.
  */
 int nvme_lib_init(enum nvme_log_level level,
 		  enum nvme_log_facility facility, const char *path)

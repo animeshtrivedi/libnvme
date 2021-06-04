@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "libnvme/nvme.h"
+#include "libspdknvme/nvme.h"
 
 static unsigned long long nvme_info_strsize(unsigned long long val,
 					    char *unit)
@@ -190,7 +190,7 @@ int main(int argc, char **argv)
 	ret = nvme_lib_init(log_level, -1, NULL);
 	if (ret != 0) {
 		fprintf(stderr,
-			"libnvme init failed %d (%s)\n",
+			"libspdknvme init failed %d (%s)\n",
 			ret, strerror(-ret));
 		exit(1);
 	}
