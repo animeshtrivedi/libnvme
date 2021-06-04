@@ -178,3 +178,8 @@ depth 1).
         3.768 usecs average I/O latency
     Detaching NVMe controller 0000:03:00.0
 
+### setup 
+```shell
+sudo apt-get install libpciaccess-dev  libpciaccess0
+sudo apt install libnuma1 libnuma-dev
+```

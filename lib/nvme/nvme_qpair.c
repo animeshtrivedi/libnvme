@@ -537,7 +537,7 @@ static int _nvme_qpair_build_contig_request(struct nvme_qpair *qpair,
 		}
 	}
 
-	tr->req->cmd.psdt = NVME_PSDT_PRP;
+	tr->req->cmd.psdt = _s_NVME_PSDT_PRP;
 	tr->req->cmd.dptr.prp.prp1 = phys_addr;
 	if (nseg == 2) {
 		seg_addr = payload + PAGE_SIZE - unaligned;
@@ -587,7 +587,7 @@ static int _nvme_qpair_build_hw_sgl_request(struct nvme_qpair *qpair,
 					req->payload_offset);
 
 	sgl = tr->u.sgl;
-	req->cmd.psdt = NVME_PSDT_SGL_MPTR_SGL;
+	req->cmd.psdt = _s_NVME_PSDT_SGL_MPTR_SGL;
 	req->cmd.dptr.sgl1.unkeyed.subtype = 0;
 
 	remaining_transfer_len = req->payload_size;
@@ -705,7 +705,7 @@ static int _nvme_qpair_build_prps_sgl_request(struct nvme_qpair *qpair,
 			nseg += 1 + ((modulo + unaligned - 1) >> PAGE_SHIFT);
 
 		if (total_nseg == 0) {
-			req->cmd.psdt = NVME_PSDT_PRP;
+			req->cmd.psdt = _s_NVME_PSDT_PRP;
 			req->cmd.dptr.prp.prp1 = phys_addr;
 		}
 

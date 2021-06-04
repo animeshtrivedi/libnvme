@@ -429,9 +429,9 @@ nvme_static_assert(sizeof(struct nvme_sgl_descriptor) == 16,
 		   "Incorrect size");
 
 enum nvme_psdt_value {
-	NVME_PSDT_PRP		   = 0x0,
+	_s_NVME_PSDT_PRP		   = 0x0,
 	NVME_PSDT_SGL_MPTR_CONTIG  = 0x1,
-	NVME_PSDT_SGL_MPTR_SGL	   = 0x2,
+	_s_NVME_PSDT_SGL_MPTR_SGL	   = 0x2,
 	NVME_PSDT_RESERVED	   = 0x3
 };
 
